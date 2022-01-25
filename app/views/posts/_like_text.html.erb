@@ -1,0 +1,9 @@
+<% if likes.size == 1 %>
+    <strong><%= likes.first.user.name %></strong> likes this
+<% elsif likes.size == 2 %>
+  <strong><%= likes.first.user.name %></strong> and <strong><%= likes.second.user.name %></strong> like this
+<% elsif likes.size == 3 %>
+  <strong><%= likes.first.user.name %></strong>, <strong><%= likes.second.user.name %></strong> and <strong><%= likes.third.user.name %></strong> like this
+<% elsif likes.size > 3 %>
+    <strong><%= likes.second_to_last.user.name %></strong>, <strong><%= likes.last.user.name %></strong> and <strong><%= likes.size - 2 %></strong> others like this
+<% end %>
